@@ -46,11 +46,8 @@ export default function AddNewAssetComponent({open, setModalOpenState}) {
     }
 
     async function createNewAsset(params) {
-        //Find phone 
-        console.log("creating asset");
-        console.log(newAsset);
         let response = await RequestAPI.postNewAsset(newAsset);
-        console.log(response);
+        setModalOpenState(false);
     }
 
     function modifyAsset(field, value) {

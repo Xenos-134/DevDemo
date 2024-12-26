@@ -24,6 +24,7 @@ import AssetCardComponent from '../StyleComponents/AssetCardComponent';
 import FooterComponent from "../StyleComponents/FooterComponent";
 import RequestAPI from "../API/RequestAPI";
 import { useNavigate } from "react-router-dom";
+import ThreeJsApi from "../API/ThreeJsAPI";
 
 export default function HomePage() {
     const [assetList, setAssetList] = useState(new Array());
@@ -31,7 +32,7 @@ export default function HomePage() {
 
     useEffect(()=>{
         //Initialize three js component
-        //ThreeJsApi.init('shader_div');
+        ThreeJsApi.init('shader_div');
         loadAssetList();
     },[]);
     
